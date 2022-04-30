@@ -101,11 +101,10 @@ class TestTextWrap:
             "url]",
             "b",
             "[URL](",
-            "http://example.com)",
-            "c",
+            "http://example.com)c",
         ]
-        expected_leading_spaces = [False, False, False, True, True, False, False]
-        expected_evaluates = [True, True, False, True, True, False, True]
+        expected_leading_spaces = [False, False, False, True, True, False]
+        expected_evaluates = [True, True, False, True, True, False]
         split_text, leading_spaces, evaluates = link_split(input_, False)
         assert len(split_text) == len(leading_spaces) == len(evaluates)
         assert split_text == expected_split_text

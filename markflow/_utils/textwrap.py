@@ -6,7 +6,7 @@ from markflow.typing import Number
 INLINE_CODE_MARKER_REGEX = re.compile(r"(((?!<\\)`)+)")
 FOOTNOTE_REGEX = re.compile(r"\[[^\[]+\]\[[^\]]+\]")
 HTML_NEWLINE_REGEX = re.compile(r"<br ?/?>")
-URL_REGEX = re.compile(r"\[[^\[]+\]\([^\)]+\)")
+URL_REGEX = re.compile(r"\[[^\[]+\]\([^\)]+\)\S?")
 
 
 def join(split_text: List[str], leading_spaces: List[bool], width: Number) -> str:
